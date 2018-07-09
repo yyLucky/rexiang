@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>关于我们</title>
+		<link rel="stylesheet" type="text/css" href="css/gywm.css"/>
+	</head>
+	<body>
+		<header class="header">
+       <div class="topbar">
+           <div class="t-container">
+               <ul class="t_ul floatL">
+                   <li class="floatR"><i><img src="images/t_mail.png"></i>postmaster@rxsatta.com</li>
+                   <li class="floatR"><i><img src="images/t_phone.png"></i>400-022-3331</li>
+                   <li class="floatL">山西热享创意文化发展有限公司欢迎您！</li>
+               </ul>
+           </div>
+       </div>
+       <div class="nav1">
+            <div class="navcontainer">
+                <div class="logo floatL"><img src="images/logo179-115.png" width="148" height="115" ></div>
+                <div class="navbox floatL">
+                  <div class="nav">
+                      <li class="drop-menu-effect"><a href="index.html"><span>首页</span></a></li>
+                      <li class="drop-menu-effect"><a href="gywm.html"><span>关于我们</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="gywm.html">CEO致辞</a><br />
+                                  <a href="gywm_fzlc.html">发展历程</a><br />
+                                  <a href="gywm_3gszl.html">公司战略</a><br />
+                                  <a href="gywm_4hxjz.html">核心竞争优势</a>
+                                </div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/guanyuwomen .jpg" width="265"/><br />
+                                <font>关于我们</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="drop-menu-effect"> <a href="dtzx.html"><span>动态中心</span></a></li>
+                
+                      <li class="drop-menu-effect"><a href="rlzy.html"><span>人力资源</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rlzy.html">人才理念</a><br />
+                                  <a href="rlzy_gltd.html">管理团队</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/renliziyuan .jpg" height="130" width="277" /><br />
+                                <font>人力资源</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="rxsc.html"><span>热享三餐</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rxsc.html">品牌介绍</a><br />
+                                  <a href="rxsc_tzms.html">投资模式</a><br />
+                                  <a href="rxsc_3cpxl.html">产品系列</a><br />
+                                  <a href="rxsc_4hzlc.html">合作流程</a><br />
+                                  <a href="rxsc_5cyzc.html">创业支持</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/rx.jpg" height="130" width="277" /><br />
+                                <font>热享三餐</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="qywh.html"><span>企业文化</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="qywh.html">发展理念</a><br />
+                                  <a href="qiwh_qyyj.html">企业愿景</a><br />
+                                  <a href="qyeh_3gzfs.html">工作方式</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/qywh.jpg" height="130" width="277" /><br />
+                                <font>企业文化</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="lxwm.html"><span>联系我们</span></a></li>      
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	lanrenzhijia(".drop-menu-effect");
+});
+function lanrenzhijia(_this){
+	$(_this).each(function(){
+		var $this = $(this);
+		var theMenu = $this.find(".submenu");
+		var tarHeight = theMenu.height();
+		theMenu.css({height:0});
+		$this.hover(
+			function(){
+				$(this).addClass("mj_hover_menu");
+				theMenu.stop().show().animate({height:tarHeight},400);
+			},
+			function(){
+				$(this).removeClass("mj_hover_menu");
+				theMenu.stop().animate({height:0},400,function(){
+					$(this).css({display:"none"});
+				});
+			}
+		);
+	});
+}
+</script>
+		
+		
+		<div id="banner"></div>
+		<div id="daohang2">
+			<ul>
+				<li id="pp"><a href="gywm.html">CEO致辞</a></li>
+				<li><a href="gywm_fzlc.html">发展历程</a></li>
+				<li><a href="gywm_3gszl.html">公司战略</a></li>
+				<li><a href="gywm_4hxjz.html">核心优势</a></li>
+			</ul>
+		</div>
+		<div id="nr1">
+			<ul id="ceo">
+				<li id="ceo1"><img src="img/gywmpic/IMG_0084.png"/></li>
+				<li id="ceo2">
+					<p id="ceo3">CEO致辞——赵娜<br />
+                                                                                       砥砺前行、顺风飞扬</p><br />
+					<p class="ceo4">热享诞生于对自由美好生活的渴望！“热爱自由，共享美好”是我们不变的企业理念。</p><br />
+					<p class="ceo4">热享人眼中的自由包括四个维度，财富自由、精神自由、时间自由、空间自由，而过着自己渴望的生活，生活在
+					        爱与喜悦中即为美好！</p><br />
+					<p class="ceo4">随着工业4.0的到来，自动、智能、3D化开始涌现取代劳动，依靠资源、资本的工业化时代发展模式已不再具备
+					       优势，人们更多的开始从事创造性工作，大型组织纷纷面临解体，小而灵活的企业取而代之，高定，个人工作
+					       室，原创手作等标签开始频繁出现在消费者面前，个性化定制时代已悄然到来！</p><br />
+					<p class="ceo4">在这个时代，我们的工作不再依赖于某一个场域。“世界那么大、我想去看看”，未来完全可以做到工作、游玩
+					       两不误，甚至于随着虚拟现实VR的成熟，距离不再是问题，远程医疗和远程教育将成为现实，未来我们可能在
+					        任意的地方诗意的栖居……</p><br />
+					<p class="ceo4">这个伟大的时代，为我们心中自由美好世界的实现提供了无限多的可能性！</p><br />
+					<p class="ceo4">但要如何顺应时代抓住这无限可能？</p><br />
+					<p class="ceo4">现在的经济形势可谓冰火两重天，一面是互联网新型经济体的高歌猛进，一面是实体企业的举步维艰。BAT改变
+					        了用户的行为模式，我们几乎可以足不出户购买到全世界的商品，金钱正随着消费体验的改变而改变流向。我们
+					        广大的个体经营者如何适应用户消费模式的转变？如何进行互联网+的改造？却是摆在每一个经营者面前的课题。</p>  
+				</li>
+			</ul>
+		</div>
+		<div id="di">
+			<div id="di1">
+				<div id="di2">
+					<div id="qian">备案号：晋ICP备16010046号-1<br />
+                                             版权所有：山西热享创意文化发展有限公司<br />
+                                             热享专线：<span id="dh">400-022-3331</span>     
+			         <p id="shangjia">商家登录&nbsp;|&nbsp;商户入驻&nbsp;|&nbsp;客户服务&nbsp;|&nbsp;新浪微博</p> </div>
+			        
+				</div>
+				<div id="hou">
+				       <img src="img/qyzsy/sc.png"/>
+				       <p id="saoma">扫码关注热享三餐</p>
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>人力资源</title>
+		<link rel="stylesheet" type="text/css" href="css/rlzy.css"/>
+	</head>
+	<body>
+		<header class="header">
+       <div class="topbar">
+           <div class="t-container">
+               <ul class="t_ul floatL">
+                   <li class="floatR"><i><img src="images/t_mail.png"></i>postmaster@rxsatta.com</li>
+                   <li class="floatR"><i><img src="images/t_phone.png"></i>400-022-3331</li>
+                   <li class="floatL">山西热享创意文化发展有限公司欢迎您！</li>
+               </ul>
+           </div>
+       </div>
+       <div class="nav1">
+            <div class="navcontainer">
+                <div class="logo floatL"><img src="images/logo179-115.png" width="148" height="115" ></div>
+                <div class="navbox floatL">
+                  <div class="nav">
+                      <li class="drop-menu-effect"><a href="index.html"><span>首页</span></a></li>
+                      <li class="drop-menu-effect"><a href="gywm.html"><span>关于我们</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="gywm.html">CEO致辞</a><br />
+                                  <a href="gywm_fzlc.html">发展历程</a><br />
+                                  <a href="gywm_3gszl.html">公司战略</a><br />
+                                  <a href="gywm_4hxjz.html">核心竞争优势</a>
+                                </div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/guanyuwomen .jpg" width="265"/><br />
+                                <font>关于我们</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="drop-menu-effect"> <a href="dtzx.html"><span>动态中心</span></a></li>
+                
+                      <li class="drop-menu-effect"><a href="rlzy.html"><span>人力资源</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rlzy.html">人才理念</a><br />
+                                  <a href="rlzy_gltd.html">管理团队</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/renliziyuan .jpg" height="130" width="277" /><br />
+                                <font>人力资源</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="rxsc.html"><span>热享三餐</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rxsc.html">品牌介绍</a><br />
+                                  <a href="rxsc_tzms.html">投资模式</a><br />
+                                  <a href="rxsc_3cpxl.html">产品系列</a><br />
+                                  <a href="rxsc_4hzlc.html">合作流程</a><br />
+                                  <a href="rxsc_5cyzc.html">创业支持</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/rx.jpg" height="130" width="277" /><br />
+                                <font>热享三餐</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="qywh.html"><span>企业文化</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="qywh.html">发展理念</a><br />
+                                  <a href="qiwh_qyyj.html">企业愿景</a><br />
+                                  <a href="qyeh_3gzfs.html">工作方式</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/qywh.jpg" height="130" width="277" /><br />
+                                <font>企业文化</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="lxwm.html"><span>联系我们</span></a></li>      
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	lanrenzhijia(".drop-menu-effect");
+});
+function lanrenzhijia(_this){
+	$(_this).each(function(){
+		var $this = $(this);
+		var theMenu = $this.find(".submenu");
+		var tarHeight = theMenu.height();
+		theMenu.css({height:0});
+		$this.hover(
+			function(){
+				$(this).addClass("mj_hover_menu");
+				theMenu.stop().show().animate({height:tarHeight},400);
+			},
+			function(){
+				$(this).removeClass("mj_hover_menu");
+				theMenu.stop().animate({height:0},400,function(){
+					$(this).css({display:"none"});
+				});
+			}
+		);
+	});
+}
+</script>
+		<div id="banner"></div>
+		<div id="daohang2">
+			<ul>
+				<li id="pp"><a href="rlzy.html">人才理念</a></li>
+				<li><a href="rlzy_gltd.html">管理团队</a></li>
+			</ul>
+		</div>
+		<div id="nr">
+			<div id="timu">
+				<img src="img/rlzypic/fdbdb.png"/>
+			</div>
+			<div id="zi">
+			<p>	员工、团队的成长是企业长期稳健发展的基石。热享重视团队建设，多渠道引进人才、高效机制培养人才、广阔平台晋升人才，为企业在激烈竞争中立于不败之地提供强有力的保障。</p><br />
+
+      <p>在引进人才方面，热享建立高标准、适度超前的人才引入机制，开辟校园招聘、社会招聘、海外引进等渠道，广纳贤才，吸收每一位道德观、价值观、企业发展观与企业高度匹配的员工，让员工在稳定和舒适的环境下实现自我价值。</p><br />
+
+      <p>在培训人才方面，山西热享自创立初期便联合山西省内各大高校资源、山西省企业家资源、山西省各类协会等机构通过对宏观经济环境、区域经济发展、互联网技术发展、人们生活发展演化的研究，经过近半年的沉淀，将生态系统的第一个入口定位为餐饮子业态，构建优化行业组织分工，提供“优质生活 热享你我”的创新生活服务。</p><br />
+
+     <p> 在晋升人才方面，热享为每一位员工提供广阔的发展空间、发展支持，让他们作为企业每一个发展领域的主人，成为企业发展的合伙人。让每一位努力奉献的员工在企业中不仅获得生活舒适的回报，而且获取企业长期发展的无限红利。</p>
+			</div>
+			<div id="tu1">
+				<img src="img/rlzypic/dc.png"/>
+			</div>
+			
+		</div>
+		<div id="di">
+			<div id="di1">
+				<div id="di2">
+					<div id="qian">备案号：晋ICP备16010046号-1<br />
+                                             版权所有：山西热享创意文化发展有限公司<br />
+                                             热享专线：<span id="dh">400-022-3331</span>     
+			         <p id="shangjia">商家登录&nbsp;|&nbsp;商户入驻&nbsp;|&nbsp;客户服务&nbsp;|&nbsp;新浪微博</p> </div>
+			        
+				</div>
+				<div id="hou">
+				       <img src="img/qyzsy/sc.png"/>
+				       <p id="saoma">扫码关注热享三餐</p>
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>

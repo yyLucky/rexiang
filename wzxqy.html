@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文章详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/wzxqy.css"/>
+	</head>
+	<body>
+		<header class="header">
+       <div class="topbar">
+           <div class="t-container">
+               <ul class="t_ul floatL">
+                   <li class="floatR"><i><img src="images/t_mail.png"></i>postmaster@rxsatta.com</li>
+                   <li class="floatR"><i><img src="images/t_phone.png"></i>400-022-3331</li>
+                   <li class="floatL">山西热享创意文化发展有限公司欢迎您！</li>
+               </ul>
+           </div>
+       </div>
+       <div class="nav1">
+            <div class="navcontainer">
+                <div class="logo floatL"><img src="images/logo179-115.png" width="148" height="115" ></div>
+                <div class="navbox floatL">
+                  <div class="nav">
+                      <li class="drop-menu-effect"><a href="index.html"><span>首页</span></a></li>
+                      <li class="drop-menu-effect"><a href="gywm.html"><span>关于我们</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="gywm.html">CEO致辞</a><br />
+                                  <a href="gywm_fzlc.html">发展历程</a><br />
+                                  <a href="gywm_3gszl.html">公司战略</a><br />
+                                  <a href="gywm_4hxjz.html">核心竞争优势</a>
+                                </div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/guanyuwomen .jpg" width="265"/><br />
+                                <font>关于我们</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="drop-menu-effect"> <a href="dtzx.html"><span>动态中心</span></a></li>
+                
+                      <li class="drop-menu-effect"><a href="rlzy.html"><span>人力资源</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rlzy.html">人才理念</a><br />
+                                  <a href="rlzy_gltd.html">管理团队</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/renliziyuan .jpg" height="130" width="277" /><br />
+                                <font>人力资源</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="rxsc.html"><span>热享三餐</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rxsc.html">品牌介绍</a><br />
+                                  <a href="rxsc_tzms.html">投资模式</a><br />
+                                  <a href="rxsc_3cpxl.html">产品系列</a><br />
+                                  <a href="rxsc_4hzlc.html">合作流程</a><br />
+                                  <a href="rxsc_5cyzc.html">创业支持</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/rx.jpg" height="130" width="277" /><br />
+                                <font>热享三餐</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="qywh.html"><span>企业文化</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="qywh.html">发展理念</a><br />
+                                  <a href="qiwh_qyyj.html">企业愿景</a><br />
+                                  <a href="qyeh_3gzfs.html">工作方式</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/qywh.jpg" height="130" width="277" /><br />
+                                <font>企业文化</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="lxwm.html"><span>联系我们</span></a></li>      
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	lanrenzhijia(".drop-menu-effect");
+});
+function lanrenzhijia(_this){
+	$(_this).each(function(){
+		var $this = $(this);
+		var theMenu = $this.find(".submenu");
+		var tarHeight = theMenu.height();
+		theMenu.css({height:0});
+		$this.hover(
+			function(){
+				$(this).addClass("mj_hover_menu");
+				theMenu.stop().show().animate({height:tarHeight},400);
+			},
+			function(){
+				$(this).removeClass("mj_hover_menu");
+				theMenu.stop().animate({height:0},400,function(){
+					$(this).css({display:"none"});
+				});
+			}
+		);
+	});
+}
+</script>
+		<div id="banner"></div>
+		<div id="nr">
+			<div id="tu1">
+				<img src="img/wzxqpic/nfxfd.png"/>
+			</div>
+			<div id="tu2">
+				<p>参考消息网5月23日报道西媒称，借助移动应用程序共享各种资源正在成为越来越多中国人选择的日常生活方式。数以百计提供各种共享服务的企业应运而生</p><br />
+
+<p>据西班牙《发展报》网站5月20日报道，除了共享自行车、电动自行车和汽车等交通工具以外，中国人又开发出其他可以共享的服务，如篮球、手机充电宝和雨伞等。最近公布的官方数据显示，2016年中国共享经济市场规模达39450亿元人民币。</p><br />
+
+<p>报道称，魔力伞是中国一家发展共享雨伞业务的互联网智能租借平台。其创始人沈巍巍介绍说，他的想法是改变中国人对雨伞保有的廉价、低质的观念。许多中国人遇到下雨时会在街头随便买一把伞，用过后就丢在家中的某一个角落里。魔力伞在地铁站口等人流密集地点放置共享雨伞租借设备，人们只需缴纳很少的押金，再用手机扫一下二维码，就可以租用优质美观的共享雨伞，租金为每12小时1元。</p><br />
+
+<p>沈巍巍表示，中国南方经常下雨，而许多人外出不习惯随身带伞，只是遇雨时再买伞，久而久之，家里会积攒下一堆廉价低质的“过剩”雨伞。这一现象使他萌生了创立共享雨伞平台的想法。</p><br />
+
+<p>报道称，近几个月来，沈巍巍和同事们已经进行了成功的试运营，下一步，他们计划在本月内于广州、深圳、福州、杭州等地增设150台雨伞租借设备。</p><br />
+
+<p>沈巍巍认为，共享经济是一种减少浪费和垃圾的理想模式，对保护环境、节能减排非常有利，特别是在中国的大城市中。</p><br />
+
+<p>上海复旦大学教授卫田（音）表示，共享经济的特点是以节约成本和提高效率为目的进行资源重新分配。卫田指出，目前在中国等一些国家，资源在民众中无法得到公平的分配如果魔力伞的共享雨伞业务取得成功，那么它很有可能复制共享单车取得的辉煌。现在已有多家企业从事共享单车业务。北京、深圳等一些城市不得不对共享单车的数量进行限制。</p><br />
+
+<p>报道称，在共享经济“爆炸式”发展的背景下，中国出现了大批提供共享服务的初创企业。一旦它们取得初步成功，往往会被较大的科技企业复制或并购。手机充电宝共享业务就属于这种发展模式。据香港《南华早报》网站报道，根据网络投资数据库平台IT桔子网站的数据，4月以来，中国投资者已向11家共享充电初创企业投入了至少1.6亿美元（约合11亿元人民币）的资金。（编译/田策）</p>
+			</div>
+		</div>
+		<div id="di">
+			<div id="di1">
+				<div id="di2">
+					<div id="qian">备案号：晋ICP备16010046号-1<br />
+                                             版权所有：山西热享创意文化发展有限公司<br />
+                                             热享专线：<span id="dh">400-022-3331</span>     
+			         <p id="shangjia">商家登录&nbsp;|&nbsp;商户入驻&nbsp;|&nbsp;客户服务&nbsp;|&nbsp;新浪微博</p> </div>
+			        
+				</div>
+				<div id="hou">
+				       <img src="img/qyzsy/sc.png"/>
+				       <p id="saoma">扫码关注热享三餐</p>
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>关于我们</title>
+		<link rel="stylesheet" type="text/css" href="css/gywm_4hxjz.css"/>
+	</head>
+	<body>
+		<header class="header">
+       <div class="topbar">
+           <div class="t-container">
+               <ul class="t_ul floatL">
+                   <li class="floatR"><i><img src="images/t_mail.png"></i>postmaster@rxsatta.com</li>
+                   <li class="floatR"><i><img src="images/t_phone.png"></i>400-022-3331</li>
+                   <li class="floatL">山西热享创意文化发展有限公司欢迎您！</li>
+               </ul>
+           </div>
+       </div>
+       <div class="nav1">
+            <div class="navcontainer">
+                <div class="logo floatL"><img src="images/logo179-115.png" width="148" height="115" ></div>
+                <div class="navbox floatL">
+                  <div class="nav">
+                      <li class="drop-menu-effect"><a href="index.html"><span>首页</span></a></li>
+                      <li class="drop-menu-effect"><a href="gywm.html"><span>关于我们</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="gywm.html">CEO致辞</a><br />
+                                  <a href="gywm_fzlc.html">发展历程</a><br />
+                                  <a href="gywm_3gszl.html">公司战略</a><br />
+                                  <a href="gywm_4hxjz.html">核心竞争优势</a>
+                                </div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/guanyuwomen .jpg" width="265"/><br />
+                                <font>关于我们</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="drop-menu-effect"> <a href="dtzx.html"><span>动态中心</span></a></li>
+                
+                      <li class="drop-menu-effect"><a href="rlzy.html"><span>人力资源</span></a>
+                        <div class="submenu">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rlzy.html">人才理念</a><br />
+                                  <a href="rlzy_gltd.html">管理团队</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/renliziyuan .jpg" height="130" width="277" /><br />
+                                <font>人力资源</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="rxsc.html"><span>热享三餐</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="rxsc.html">品牌介绍</a><br />
+                                  <a href="rxsc_tzms.html">投资模式</a><br />
+                                  <a href="rxsc_3cpxl.html">产品系列</a><br />
+                                  <a href="rxsc_4hzlc.html">合作流程</a><br />
+                                  <a href="rxsc_5cyzc.html">创业支持</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/rx.jpg" height="130" width="277" /><br />
+                                <font>热享三餐</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="qywh.html"><span>企业文化</span></a>
+                        <div class="submenu" style="left:-300px;">
+                          <div class="mj_menu_news_bg">
+                            <div class="mj_menu_news_main">
+                              <div class="mj_menu_news_li">
+                                <div class="mj_menu_li_txt">
+                                  <a href="qywh.html">发展理念</a><br />
+                                  <a href="qiwh_qyyj.html">企业愿景</a><br />
+                                  <a href="qyeh_3gzfs.html">工作方式</a></div>
+                              </div>
+                              <div class="mj_menu_news_img"><img src="images/qywh.jpg" height="130" width="277" /><br />
+                                <font>企业文化</font></div>
+                              <div style="clear:both; height:0px; overflow:hidden;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li class="drop-menu-effect"> <a href="lxwm.html"><span>联系我们</span></a></li>      
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	lanrenzhijia(".drop-menu-effect");
+});
+function lanrenzhijia(_this){
+	$(_this).each(function(){
+		var $this = $(this);
+		var theMenu = $this.find(".submenu");
+		var tarHeight = theMenu.height();
+		theMenu.css({height:0});
+		$this.hover(
+			function(){
+				$(this).addClass("mj_hover_menu");
+				theMenu.stop().show().animate({height:tarHeight},400);
+			},
+			function(){
+				$(this).removeClass("mj_hover_menu");
+				theMenu.stop().animate({height:0},400,function(){
+					$(this).css({display:"none"});
+				});
+			}
+		);
+	});
+}
+</script>
+		
+		
+		
+		<div id="banner"></div>
+		<div id="daohang2">
+			<ul>
+				<li><a href="gywm.html">CEO致辞</a></li>
+				<li><a href="gywm_fzlc.html">发展历程</a></li>
+				<li><a href="gywm_3gszl.html">公司战略</a></li>
+				<li id="pp"><a href="gywm_4hxjz.html">核心优势</a></li>
+			</ul>
+		</div>
+		<div id="nr3">
+			<div id="kuang2">
+				<ul>
+					<li id="o1"><p class="lanse">企业竞争核心优势</p>
+						<p class="sy"> 商业整合优势</p>
+						<p> 基于共享经济理念，研发设计餐饮共享商业模式；整合国内各界精英共同开创热享三餐事业；同时立足龙城太原，从原材料到出品整合了各个环节的优质资源，其中有原材料产地、餐饮界供应链专家、高端大厨资源、市场开拓、运营团队、个体创业团队、忠实的客户群体。</p>
+						<p class="sy">平台运营优势</p>
+						<p>拥有强大的技术后台开发团队，打造专业的第三方移动互联服务平台。热享生态由应用前端业务接入及后台系统运营集合模型两部分组成。应用前端接入体系分三个部分：认证餐饮企业的客户端、大厨众包客户端、用户专属服务移动互联客户端。后台运营商业模型：热享三餐后台应用了移动互联网下的大数据技术，实现了匠人，美味与服务精准定位，实时查找，并建立了云端供应链防伪追溯系统，在云端为食品安全的源头进行管理。此移动管理平台为国内第一个运营生态级移动餐饮平台，具有稳定性、易用性、开放性、可扩展性等多方面优势。</p>
+						<p class="sy">市场执行优势</p>
+						<p>我们的创业团队核心成员均来自国内一流的IT企业，拥有深厚的行业背景和管理实践能力；同时我们拥有餐饮业内资深从业人员，具有共同价值观、使命必达的市场团队。</p>
+						<p class="sy">资本运作优势</p>
+						<p>热享拥有资深金融、资本运作合伙人、专家，基于商业模式，平台从搭建之始，就致力于集成生态系统内创业的众筹、系统内的消费金融、系统内的供应链金融等。实现完整的生态环境，多行业共建共享利益体系，形成共赢。</p>
+					</li>
+					<li id="o2"><img src="img/gywmpic/uu.jpg"/></li>
+				</ul>
+			</div>
+		</div>
+		<div id="di">
+			<div id="di1">
+				<div id="di2">
+					<div id="qian">备案号：晋ICP备16010046号-1<br />
+                                             版权所有：山西热享创意文化发展有限公司<br />
+                                             热享专线：<span id="dh">400-022-3331</span>     
+			         <p id="shangjia">商家登录&nbsp;|&nbsp;商户入驻&nbsp;|&nbsp;客户服务&nbsp;|&nbsp;新浪微博</p> </div>
+			        
+				</div>
+				<div id="hou">
+				       <img src="img/qyzsy/sc.png"/>
+				       <p id="saoma">扫码关注热享三餐</p>
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,190 @@
+body{
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #4a4947;
+}
+@charset "utf-8";
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font-size:12px;color:#333;font-family:'微软雅黑';}
+.floatL{
+	float:left}
+.floatR{
+	float:right;}
+.header{
+	background:#FFFFFF;
+	width:100%;}
+.topbar{
+	width:100%;
+	background:#333333;
+	height:40px;
+	min-width: 1200px;}
+.t-container{
+	width:1024px;
+	margin:0 auto;}
+.t_ul{
+	width:1024px;
+	margin-top:10px;
+	color:#FFFFFF;
+	font-size:12px;}
+.t_ul li{
+	margin-right:20px;}
+.t_ul li i{
+	margin-right:10px;}
+
+.nav1{
+	width:100%;
+	height:115px;}
+.navcontainer{
+	width:1024px;
+	height:115px;
+	margin:0 auto;}
+
+.navbox{height:115px;position:relative;z-index:9; margin:auto;width:772px; margin-left:100px;}
+.nav{width:772px;height:110px; list-style:none; }
+.nav li{float:left;height:110px;position:relative; list-style:none;}
+.nav li.last{background:none;}
+.nav li a{text-decoration:none;}
+.nav li a span{float:left;display:block;line-height:110px;font-size:14px;color:#333;cursor:pointer;width:110px;text-align:center; }
+.mj_hover_menu{text-decoration:none; width:110px; height:110px;}
+.nav li.selected .submenu{display:block;}
+.nav li .submenu{display:none;position:absolute;top:90px;left:-9px;}
+.nav li .submenu li{float:none;padding:0;background:none;height:auto;border-bottom:dotted 0px #BEBEBE;}
+.mj_menu_pro_li{ float:left;}
+.mj_menu_li_txt{line-height:30px; font-size:12px; color:#fff;}
+.mj_menu_li_txt font{font-size:15px; color:#fff000;}
+.mj_menu_li_txt a{color:#fff; text-decoration:none;}
+.mj_menu_li_txt a:hover{color:#fff000; text-decoration:underline;}
+.mj_menu_news_bg{width:480px; height:210px; background:url(../images/menu_news_bg.png) no-repeat;}
+.mj_menu_news_main{width:440px; margin:auto; padding-top:25px;}
+.mj_menu_news_li{padding:0px 30px; margin-right:30px; height:150px; float:left; border-right:solid 1px #cccccc; }
+.mj_menu_news_img{float:left; text-align:left; color:#fff000; line-height:30px; font-size:14px;}
+.mj_menu_news_li2{padding:0px 30px; height:150px; float:right; border-left:solid 1px #cccccc; }
+.mj_menu_news_img2{float:left; margin-left:30px; text-align:left; color:#bb1721; line-height:30px; font-size:14px;}
+.mj_menu_news_li3{padding:0px 25px; height:150px; float:right; border-left:solid 1px #cccccc; }
+.mj_menu_news_img3{float:left; margin-left:10px; text-align:left; color:#bb1721; line-height:30px; font-size:14px;}
+
+
+
+
+
+#banner{
+	width: 100%;
+	margin: 0 auto;
+	height: 270px;
+	background: url(../images/banner2.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-width: 1200px;
+}
+#banner img{width: 100%;}
+/*banan图*/
+#daohang2{
+	width: 100%;
+	height: 40px;
+	background-color: #e0e0e0;
+	min-width: 1200px;
+}
+#daohang2 ul{
+	width: 1200px;
+	margin: 0 auto;
+}
+#daohang2 li{
+	list-style: none;
+	float: left;
+	padding:0 30px;
+	line-height: 40px;
+}
+#daohang2 li a{
+	text-decoration: none;
+    font-size: 14px;
+    color: black;	
+}
+#pp{
+	background-color:white ;
+}
+#daohang2 li:hover {
+	background-color:white ;
+}
+/*导航2*/
+#nr1{
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	
+}
+#nr1 li{
+	list-style: none;
+	overflow: hidden;
+}
+#ceo{
+	width: 1024px;
+	padding-top: 80px;
+	margin: 0 auto;
+}
+#ceo1{
+	float: left;
+}
+#ceo2{
+	width: 600px;
+	padding-top: 10px;
+	margin-left: 432px;
+	font-size: 14px;
+}
+#ceo3{
+	color: #3096ff;
+	font-size: 16px;
+}
+.ceo4{
+	line-height: 22px;
+}
+/*内容1*/
+#di{
+	width: 100%;
+	height: 165px;
+	background-color: #3096ff;
+	margin: 0 auto;
+	background-position: center;
+	background-size: cover;
+	min-width: 1200px;	
+	margin-top: 70px;
+}
+#di1{width:1024px;
+     margin: 0 auto;
+     padding-top: 25px;}
+#di2{
+	width:400px;
+	float: left;	
+}
+#di1 #qian{
+	float: left;
+	font-size: 14px;
+	line-height: 24px;
+}
+#di1 #dh{
+	font-size: 16px;
+}
+#di1 #shangjia{
+	font-size: 18px;
+	margin-top: 15px;
+}
+#di1 #hou{
+	width: 100px;
+	float: right;
+}
+#qian{
+	width: 400px;
+	color: white;
+	font-weight: 100;
+}
+#hou img{
+	height: 100px;
+}
+#hou{
+	font-weight: 100;
+}
+#hou #saoma{
+	color: white;
+	margin-left: 2px;
+}
